@@ -62,8 +62,8 @@ public class passwordTest {
 	 @Test
 		public void Tests4() {
 		 
-		 browser.findElement(By.name("characters")).sendKeys("***");
-		 String Expected="Invalid Value";
+		 browser.findElement(By.name("characters")).sendKeys("*******");
+		 String Expected="Valid Value";
 		 browser.findElement(By.name("validate")).click();
 		 String result= browser.findElement(By.name("validation_message")).getAttribute("value").toString();
 		assertEquals(Expected,result);
