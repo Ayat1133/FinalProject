@@ -103,6 +103,7 @@ public class TringleTesting {
 
         assertEquals("NotaTriangle", result.getText());
     }
+    
     @Test
     public void testTriangleClassification5() {
         WebElement side1 = browser.findElement(By.id("side1"));
@@ -119,6 +120,7 @@ public class TringleTesting {
 
         assertEquals("Not a Triangle", result.getText());
     }
+    
     @Test
     public void testTriangleClassification6() {
         WebElement side1 = browser.findElement(By.id("side1"));
@@ -135,6 +137,7 @@ public class TringleTesting {
 
         assertEquals("Not a Triangle", result.getText());
     }
+    
     @Test
     public void testTriangleClassification7() {
         WebElement side1 = browser.findElement(By.id("side1"));
@@ -151,6 +154,7 @@ public class TringleTesting {
 
         assertEquals("Not a Triangle", result.getText());
     }
+    
     @Test
     public void testTriangleClassification8() {
         WebElement side1 = browser.findElement(By.id("side1"));
@@ -158,8 +162,8 @@ public class TringleTesting {
         WebElement side3 = browser.findElement(By.id("side3"));
 
         side1.sendKeys("1");
-        side2.sendKeys("1");
-        side3.sendKeys("2");
+        side2.sendKeys("100");
+        side3.sendKeys("10");
 
         browser.findElement(By.id("identify-triangle-action")).click();
 
@@ -167,5 +171,4 @@ public class TringleTesting {
 
         assertEquals("Not a Triangle", result.getText());
     }
-    
 }
