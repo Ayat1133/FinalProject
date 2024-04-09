@@ -80,10 +80,8 @@ public class TringleTesting {
         assertEquals("Equilateral", result.getText());
 
     }
-
     @Test
-
-    public void testTriangleClassification1() {
+    public void testTriangleClassification01() {
 
         WebElement side1 = browser.findElement(By.id("side1"));
 
@@ -93,13 +91,11 @@ public class TringleTesting {
 
 
 
-        side1.sendKeys("4");
+        side1.sendKeys("7");
 
-        side2.sendKeys("4");
+        side2.sendKeys("5");
 
         side3.sendKeys("5");
-
-
 
         browser.findElement(By.id("identify-triangle-action")).click();
 
@@ -109,6 +105,24 @@ public class TringleTesting {
 
 
 
+        assertEquals("Isosceles", result.getText());
+
+    }
+
+    @Test
+
+    public void testTriangleClassification1() {
+
+        WebElement side1 = browser.findElement(By.id("side1"));
+        WebElement side2 = browser.findElement(By.id("side2"));
+        WebElement side3 = browser.findElement(By.id("side3"));
+
+        side1.sendKeys("4");
+        side2.sendKeys("4");
+        side3.sendKeys("5");
+
+        browser.findElement(By.id("identify-triangle-action")).click();
+        WebElement result = browser.findElement(By.id("triangle-type"));
         assertEquals("Isosceles", result.getText());
 
     }
